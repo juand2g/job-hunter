@@ -1,0 +1,14 @@
+[Unit]
+Description=Job Hunter - fetch and score remote jobs
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=juand2g
+Group=juand2g
+WorkingDirectory=/home/juand2g/Documentos/job-hunter
+ExecStart=/home/juand2g/Documentos/job-hunter/scripts/fetch.sh
+
+[Install]
+WantedBy=multi-user.target
